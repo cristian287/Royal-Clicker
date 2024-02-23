@@ -1,0 +1,169 @@
+#main_menu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  box-shadow: inset 0px 0px 1px 10px black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: #482c68;
+}
+.load:after {
+  content: "cargando";
+  font-size: 30px;
+  position: absolute;
+  animation: load 4s linear 1s;
+  animation-fill-mode: forwards;
+  background-color: rgba(20, 20, 20, 0.356);
+  backdrop-filter: blur(40px);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transform: perspective(3000px) rotateY(0deg);
+  transform-origin: left;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+@keyframes load {
+  0% {
+    transform: perspective(3000px) rotateY(-10deg);
+  }
+  15% {
+    transform: perspective(3000px) rotateY(-10deg);
+  }
+  45% {
+    transform: perspective(3000px) rotateY(-150deg);
+  }
+  50% {
+    transform: perspective(3000px) rotateY(-140deg);
+  }
+  100% {
+    transform: perspective(3000px) rotateY(-160deg);
+  }
+}
+.flip-menu1 {
+  animation: abrir 4s linear 1s forwards;
+  transform-origin: left;
+  transition: transform 1s;
+}
+@keyframes abrir {
+  0% {
+    transform: perspective(3000px) rotateY(0deg);
+  }
+  15% {
+    transform: perspective(30px) rotateY(-10deg);
+  }
+  45% {
+    transform: perspective(3000px) rotateY(-150deg);
+  }
+  50% {
+    transform: perspective(3000px) rotateY(-140deg);
+  }
+  100% {
+    transform: perspective(3000px) rotateY(-160deg);
+  }
+}
+.logo {
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.logo-title {
+  display: flex;
+  flex-direction: row;
+  color: gold;
+  font-weight: 950;
+  line-height: 120px;
+  box-sizing: border-box;
+  animation: jump 1s infinite alternate cubic-bezier(0.43, -0.18, 0.09, 1.08);
+  position: relative;
+  z-index: 3;
+  font-size: 45px;
+  text-shadow: 1px 1px 5px black, -1px -1px 8px purple;
+  font-family: nabla;
+  text-align: center;
+}
+.main-menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+.menu-buttons {
+  font-family: rain;
+  font-size: xx-large;
+  animation-name: rain1;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes rain {
+  from {
+  }
+  to {
+  }
+}
+.logo_main_button {
+  position: relative;
+  z-index: 1;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(221, 9, 9);
+  border-radius: 100px;
+  box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
+    0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
+  transform: rotateX(50deg) perspective(3000px);
+  animation: jump-button 1s infinite alternate
+    cubic-bezier(0.13, 0.86, 0.32, 1.28);
+  animation-delay: 0.1ms;
+}
+@keyframes jump-button {
+  from {
+    transform: translateY(50px) rotateX(50deg) scaleX(1.1);
+    box-shadow: 0px 10px 0px rgb(37, 37, 37), 0px 20px 0px rgb(26, 26, 26),
+      0px 40px 0px rgb(32, 32, 32), 0px 50px 0px rgb(10, 10, 10),
+      1px 1px 100px inset black;
+  }
+  to {
+    box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
+      0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
+  }
+}
+@keyframes jump {
+  from {
+    transform: translateY(170px) scaleY(0.5);
+    text-shadow: 1px 5px 5px black, -1px -1px 8px purple;
+  }
+  to {
+    transform: translateY(0) scaleY(2);
+    filter: brightness(200%);
+    text-shadow: 10px 50px 40px black, -1px -1px 8px purple;
+  }
+}
+.logo-main-one {
+  position: absolute;
+  font-size: xx-large;
+  animation: plusONE 1s infinite alternate-reverse
+    cubic-bezier(0.13, 0.86, 0.32, 1.28);
+  animation-delay: 0.9s;
+}
+@keyframes plusONE {
+  from {
+    transform: translateY(100px) scaleY(0.5);
+    text-shadow: 1px 5px 5px black, -1px -1px 8px purple;
+  }
+  to {
+    transform: translateY(230px) scaleY(0.5) perspective(3000px);
+    filter: brightness(200%);
+    text-shadow: 10px 50px 40px black, -1px -1px 8px purple;
+  }
+}
