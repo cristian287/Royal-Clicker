@@ -21,7 +21,13 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener("deviceready", onDeviceReady, false);
 import clickerButtons from "../js/clickerStart/buttons.js";
+import makeClick from "../js/clickLogic/makeClick.js"
+
 clickerButtons();
+
+document.getElementById("mainButton").addEventListener("click",function(){
+  makeClick()
+})
 
 function onDeviceReady() {
   // Cordova is now initialized. Have fun!

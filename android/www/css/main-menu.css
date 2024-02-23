@@ -9,44 +9,10 @@
   align-items: center;
   flex-direction: column;
   background-color: #482c68;
-}
-.load:after {
-  content: "cargando";
-  font-size: 30px;
-  position: absolute;
-  animation: load 4s linear 1s;
-  animation-fill-mode: forwards;
-  background-color: rgba(20, 20, 20, 0.356);
-  backdrop-filter: blur(40px);
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  transform: perspective(3000px) rotateY(0deg);
-  transform-origin: left;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  opacity: 0;
 }
-@keyframes load {
-  0% {
-    transform: perspective(3000px) rotateY(-10deg);
-  }
-  15% {
-    transform: perspective(3000px) rotateY(-10deg);
-  }
-  45% {
-    transform: perspective(3000px) rotateY(-150deg);
-  }
-  50% {
-    transform: perspective(3000px) rotateY(-140deg);
-  }
-  100% {
-    transform: perspective(3000px) rotateY(-160deg);
-  }
-}
-.flip-menu1 {
+/* .flip-menu1 {
   animation: abrir 4s linear 1s forwards;
   transform-origin: left;
   transition: transform 1s;
@@ -67,7 +33,7 @@
   100% {
     transform: perspective(3000px) rotateY(-160deg);
   }
-}
+} */
 .logo {
   background-size: cover;
   height: 300px;
@@ -95,7 +61,7 @@
 .main-menu-buttons {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   text-align: center;
 }
 .menu-buttons {
@@ -120,7 +86,8 @@
   background-color: rgb(221, 9, 9);
   border-radius: 100px;
   box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
-    0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
+    0px 80px 0px rgb(61, 61, 61), 0px 100px 0px,
+    140px 100px 40px rgb(10, 10, 10);
   transform: rotateX(50deg) perspective(3000px);
   animation: jump-button 1s infinite alternate
     cubic-bezier(0.13, 0.86, 0.32, 1.28);
@@ -165,5 +132,74 @@
     transform: translateY(230px) scaleY(0.5) perspective(3000px);
     filter: brightness(200%);
     text-shadow: 10px 50px 40px black, -1px -1px 8px purple;
+  }
+}
+#multiplayerMode {
+  display: flex;
+}
+.menu-j-leters {
+  display: inline-block;
+  animation: jumpLeters 2s ease-in-out infinite;
+  font-family: rain;
+}
+.menu-j-leters:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.menu-j-leters:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+/* .menu-j-leters:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  background: url(../img/golden-crown.png) no-repeat center;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  left: -15px;
+  transform: rotate(-25deg);
+} */
+@keyframes jumpLeters {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main-menu-buttons {
+  animation: traslateMainButtons 0.8s linear 1 forwards;
+  animation-delay: 5s;
+  transform: translateY(150%);
+}
+@keyframes traslateMainButtons {
+  0% {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 20%;
+  }
+  60% {
+    opacity: 100%;
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

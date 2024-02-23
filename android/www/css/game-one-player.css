@@ -1,0 +1,75 @@
+#game-one-player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.game-one-header {
+  width: 100%;
+  height: 20%;
+  background-color: aqua;
+  position: relative;
+}
+.game-one-click {
+  width: 100%;
+  height: 90%;
+  background-color: #50bb52;
+  box-shadow: inset 0px 0px 1px 10px black;
+  position: relative;
+}
+.game-one-buttons {
+  width: 100%;
+  height: 10%;
+  background-color: #482c68;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.game-one-button {
+  width: 50%;
+  height: 100%;
+  background-color: #482c68;
+}
+.game-button-generico {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-size: xx-large;
+  box-shadow: inset 0px 0px 0.5px 1px black;
+}
+#game-one-salir-button {
+  background-color: rgb(138, 15, 15);
+}
+.game-one-click-infoClicks {
+  position: relative;
+  left: 20px;
+  top: 70px;
+  background-color: #217d1e;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.game-one-click-redButton {
+  z-index: 1;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(221, 9, 9);
+  border-radius: 100px;
+  box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
+    0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
+  transition: 0.3s;
+}
+.game-one-click-redButton:active {
+  transition: 0.1s;
+  transform: translateY(50px) rotateX(50deg) scaleX(1.2);
+  transition: 0.1s;
+  box-shadow: 0px 20px 0px rgb(37, 37, 37), 0px 30px 0px rgb(26, 26, 26),
+    0px 40px 0px rgb(32, 32, 32), 0px 50px 0px rgb(10, 10, 10),
+    2px 2px 20px hsl(0, 0%, 0%), 25px 5px 40px black, 1px 1px 100px inset black;
+}
+.game-one-noticias {
+  background-color: blue;
+}

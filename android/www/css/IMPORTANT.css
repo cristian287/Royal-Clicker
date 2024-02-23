@@ -27,6 +27,7 @@
 body {
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 button {
   background: none;
@@ -73,3 +74,29 @@ button:active {
   width: 100%;
   height: 100%;
 } */
+body:-webkit-scrollbar {
+  display: none;
+}
+.load {
+  content: "cargando";
+  font-size: 30px;
+  position: absolute;
+  animation: load 4s linear 1s forwards;
+  transform-origin: left;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+@keyframes load {
+  0% {
+    opacity: 0;
+    background-color: black;
+  }
+  15% {
+  }
+  100% {
+    opacity: 100%;
+  }
+}
