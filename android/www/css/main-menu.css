@@ -34,30 +34,7 @@
     transform: perspective(3000px) rotateY(-160deg);
   }
 } */
-.logo {
-  background-size: cover;
-  height: 300px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-.logo-title {
-  display: flex;
-  flex-direction: row;
-  color: gold;
-  font-weight: 950;
-  line-height: 120px;
-  box-sizing: border-box;
-  animation: jump 1s infinite alternate cubic-bezier(0.43, -0.18, 0.09, 1.08);
-  position: relative;
-  z-index: 3;
-  font-size: 45px;
-  text-shadow: 1px 1px 5px black, -1px -1px 8px purple;
-  font-family: nabla;
-  text-align: center;
-}
+
 .main-menu-buttons {
   display: flex;
   flex-direction: column;
@@ -72,12 +49,6 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-@keyframes rain {
-  from {
-  }
-  to {
-  }
-}
 .logo_main_button {
   position: relative;
   z-index: 1;
@@ -89,20 +60,19 @@
     0px 80px 0px rgb(61, 61, 61), 0px 100px 0px,
     140px 100px 40px rgb(10, 10, 10);
   transform: rotateX(50deg) perspective(3000px);
-  animation: jump-button 1s infinite alternate
-    cubic-bezier(0.13, 0.86, 0.32, 1.28);
-  animation-delay: 0.1ms;
+  animation: jump-button 1s infinite alternate ease-in-out;
+  animation-delay: 6.1s;
 }
 @keyframes jump-button {
   from {
+    box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
+      0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
+  }
+  to {
     transform: translateY(50px) rotateX(50deg) scaleX(1.1);
     box-shadow: 0px 10px 0px rgb(37, 37, 37), 0px 20px 0px rgb(26, 26, 26),
       0px 40px 0px rgb(32, 32, 32), 0px 50px 0px rgb(10, 10, 10),
       1px 1px 100px inset black;
-  }
-  to {
-    box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
-      0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
   }
 }
 @keyframes jump {
@@ -119,19 +89,19 @@
 .logo-main-one {
   position: absolute;
   font-size: xx-large;
-  animation: plusONE 1s infinite alternate-reverse
-    cubic-bezier(0.13, 0.86, 0.32, 1.28);
-  animation-delay: 0.9s;
+  animation: plusONE 1s infinite alternate-reverse ease-in-out;
+  animation-delay: 6s;
+  transform: translateY(100px) scaleY(0.5);
 }
 @keyframes plusONE {
   from {
-    transform: translateY(100px) scaleY(0.5);
-    text-shadow: 1px 5px 5px black, -1px -1px 8px purple;
-  }
-  to {
-    transform: translateY(230px) scaleY(0.5) perspective(3000px);
+    transform: translateY(230px) scaleY(0.9) perspective(3000px);
     filter: brightness(200%);
     text-shadow: 10px 50px 40px black, -1px -1px 8px purple;
+  }
+  to {
+    transform: translateY(150px) scaleY(0.5);
+    text-shadow: 1px 5px 5px black, -1px -1px 8px purple;
   }
 }
 #multiplayerMode {
@@ -179,7 +149,7 @@
 }
 .main-menu-buttons {
   animation: traslateMainButtons 0.8s linear 1 forwards;
-  animation-delay: 5s;
+  animation-delay: 9s;
   transform: translateY(150%);
 }
 @keyframes traslateMainButtons {
@@ -203,7 +173,7 @@
     transform: translateY(0);
   }
 }
-/* .letter-fall {
+.letter-fall {
   display: inline-block;
   animation: fall 2s ease-in-out forwards;
   animation-delay: calc(0.1s * var(--index));
@@ -225,9 +195,3 @@
     opacity: 1;
   }
 }
-
-.letter:nth-child(n + 1):nth-child(-n + 14) {
-  --index: calc(
-    charindex(letter, "ROYAL CLICKER") - charindex(letter, "ROYAL CLICKER ")
-  );
-} */
