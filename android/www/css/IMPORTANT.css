@@ -81,7 +81,7 @@ body:-webkit-scrollbar {
   content: "";
   font-size: 30px;
   position: absolute;
-  animation: load 4ms linear 1s forwards;
+  animation: load 2s linear 1s forwards;
   transform-origin: left;
   overflow: hidden;
 }

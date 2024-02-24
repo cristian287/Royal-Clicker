@@ -57,11 +57,20 @@
   background-color: rgb(221, 9, 9);
   border-radius: 100px;
   box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
-    0px 80px 0px rgb(61, 61, 61), 0px 100px 0px,
-    140px 100px 40px rgb(10, 10, 10);
+    0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
   transform: rotateX(50deg) perspective(3000px);
-  animation: jump-button 1s infinite alternate ease-in-out;
-  animation-delay: 6.1s;
+  animation: jump-button 1s infinite alternate ease-in-out forwards,
+    apear 1s 1 normal linear forwards;
+  animation-delay: 6.1s, 6s;
+  opacity: 0;
+}
+@keyframes apear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 @keyframes jump-button {
   from {
@@ -89,9 +98,11 @@
 .logo-main-one {
   position: absolute;
   font-size: xx-large;
-  animation: plusONE 1s infinite alternate-reverse ease-in-out;
-  animation-delay: 6s;
+  animation: plusONE 1s infinite alternate-reverse ease-in-out,
+    apear 1s 1 normal linear forwards;
+  animation-delay: 6s, 6.5s;
   transform: translateY(100px) scaleY(0.5);
+  opacity: 0;
 }
 @keyframes plusONE {
   from {
