@@ -5,19 +5,18 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  align-items: center;
 }
-.game-one-header {
-  width: 100%;
-  height: 20%;
-  background-color: aqua;
-  position: relative;
-}
+
 .game-one-click {
   width: 100%;
   height: 90%;
   background-color: #50bb52;
-  box-shadow: inset 0px 0px 1px 10px black;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .game-one-buttons {
   width: 100%;
@@ -44,23 +43,24 @@
 }
 .game-one-click-infoClicks {
   position: relative;
-  left: 20px;
-  top: 70px;
   background-color: #217d1e;
-  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
+  text-decoration: underline;
 }
 .game-one-click-redButton {
   z-index: 1;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-color: rgb(221, 9, 9);
   border-radius: 100px;
   box-shadow: 0px 20px 0px red, 0px 40px 0px rgb(102, 102, 102),
     0px 80px 0px rgb(61, 61, 61), 0px 100px 0px;
+  transform: rotateX(50deg) perspective(3000px);
   transition: 0.3s;
+  position: relative;
+  bottom: 40px;
 }
 .game-one-click-redButton:active {
   transition: 0.1s;
@@ -72,4 +72,11 @@
 }
 .game-one-noticias {
   background-color: blue;
+}
+#mainButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: keep-all;
 }

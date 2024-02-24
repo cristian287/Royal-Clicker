@@ -143,11 +143,11 @@
   font-family: rain;
 }
 .menu-j-leters:nth-child(even) {
-  animation-delay: 0.2s;
+  animation-delay: 4.2s;
 }
 
 .menu-j-leters:nth-child(odd) {
-  animation-delay: 0.4s;
+  animation-delay: 4.4s;
 }
 /* .menu-j-leters:nth-child(1)::after {
   content: "";
@@ -203,3 +203,31 @@
     transform: translateY(0);
   }
 }
+/* .letter-fall {
+  display: inline-block;
+  animation: fall 2s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--index));
+  transform-origin: 50% 100%;
+  animation-delay: 2s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) rotateX(-90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.letter:nth-child(n + 1):nth-child(-n + 14) {
+  --index: calc(
+    charindex(letter, "ROYAL CLICKER") - charindex(letter, "ROYAL CLICKER ")
+  );
+} */

@@ -1,1 +1,0 @@
-//reiniciar el jugador

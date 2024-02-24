@@ -1,7 +1,7 @@
 import { vanishUnvanish } from "../utilityFunctions/vanishData.js";
 import { backToMenu } from "./backToMenu.js";
 import { startGame } from "./startGame.js";
-export default async function clickerButtons() {
+export default async function clickerButtons(player) {
   document
     .getElementById("practiceMode")
     .addEventListener("click", function () {
@@ -12,5 +12,5 @@ export default async function clickerButtons() {
     vanishUnvanish("vanish", document.getElementById("main_menu"));
   }
   startGame("practica")
-  backToMenu();
+  backToMenu(player);
 }

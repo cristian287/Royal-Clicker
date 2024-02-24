@@ -21,13 +21,32 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener("deviceready", onDeviceReady, false);
 import clickerButtons from "../js/clickerStart/buttons.js";
-import makeClick from "../js/clickLogic/makeClick.js"
+import updateVisual from "../js/utilityFunctions/updateVisual.js";
 
-clickerButtons();
+const player = {
+  clicks: 0,
+  clickPerClick: 1,
+  autoClick: 0,
+  acumulatedClicks: 0,
+  makeManualClick: function () {
+    this.clicks = this.clickPerClick + this.clicks;
+    this.acumulatedClicks = this.acumulatedClicks + this.clickPerClick;
+  },
+  resetMe: function () {
+    console.log("resetting");
+    this.clicks = 0;
+    this.clickPerClick = 1;
+    this.autoClick = 0;
+    this.acumulatedClicks = 0;
+  },
+};
 
-document.getElementById("mainButton").addEventListener("click",function(){
-  makeClick()
-})
+clickerButtons(player);
+
+document.getElementById("mainButton").addEventListener("click", function () {
+  player.makeManualClick();
+  updateVisual(player);
+});
 
 function onDeviceReady() {
   // Cordova is now initialized. Have fun!
