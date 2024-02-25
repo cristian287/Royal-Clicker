@@ -96,3 +96,20 @@ body:-webkit-scrollbar {
     opacity: 100%;
   }
 }
+/* .onLoad {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  animation: onLoads 2s linear 1s forwards;
+  transform-origin: left;
+  overflow: hidden;
+}
+@keyframes load {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+  }
+} */

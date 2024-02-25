@@ -9,6 +9,6 @@ export default async function updateVisual(player) {
     "totalClicks"
   ).textContent = `clicks totales : ${player.clicks}`;
   document.getElementById(
-    "mainButton"
-  ).textContent = `clicks disponibles : ${player.acumulatedClicks}`;
+    "mainButton-clicks"
+  ).textContent = ` ${player.acumulatedClicks}`;
 }

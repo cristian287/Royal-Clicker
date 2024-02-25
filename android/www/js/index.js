@@ -22,12 +22,14 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 import clickerButtons from "../js/clickerStart/buttons.js";
 import updateVisual from "../js/utilityFunctions/updateVisual.js";
+import { vanishUnvanish } from "../js/utilityFunctions/vanishData.js";
 
 const player = {
   clicks: 0,
   clickPerClick: 1,
   autoClick: 0,
   acumulatedClicks: 0,
+  tiendaAbierta: false,
   makeManualClick: function () {
     this.clicks = this.clickPerClick + this.clicks;
     this.acumulatedClicks = this.acumulatedClicks + this.clickPerClick;
@@ -38,6 +40,7 @@ const player = {
     this.clickPerClick = 1;
     this.autoClick = 0;
     this.acumulatedClicks = 0;
+    this.tiendaAbierta = false;
   },
 };
 
@@ -47,6 +50,18 @@ document.getElementById("mainButton").addEventListener("click", function () {
   player.makeManualClick();
   updateVisual(player);
 });
+
+document
+  .getElementById("game-one-tienda-button")
+  .addEventListener("click", function () {
+    if (player.tiendaAbierta) {
+      vanishUnvanish("unvanish", document.getElementById("tienda"));
+      player.tiendaAbierta = false;
+      return;
+    }
+    vanishUnvanish("vanish", document.getElementById("tienda"));
+    player.tiendaAbierta = true;
+  });
 
 function onDeviceReady() {
   // Cordova is now initialized. Have fun!

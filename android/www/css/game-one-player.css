@@ -61,6 +61,8 @@
   transition: 0.3s;
   position: relative;
   bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .game-one-click-redButton:active {
   transition: 0.1s;
