@@ -103,6 +103,7 @@
   animation-delay: 6s, 6.5s;
   transform: translateY(100px) scaleY(0.5);
   opacity: 0;
+  font-size: 20px;
 }
 @keyframes plusONE {
   from {

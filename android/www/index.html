@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main-menu-title-animation.css" />
     <link rel="stylesheet" href="./css/game-one-player.css" />
     <link rel="stylesheet" href="./css/tienda.css" />
+    <link rel="stylesheet" href="./css/game-buttons-footer.css" />
     <link rel="stylesheet" href="./css/IMPORTANT.css" />
     <title>royal clicker</title>
   </head>
@@ -66,28 +67,41 @@
       </div>
     </div>
     <div id="game-one-player" class="load">
-      <div class="game-one-noticias">
-        aqui van a salir noticias cuando haya alguna :v
+      <div class="game-info">
+        <div class="game-puesto">
+          <div>Puesto 0/0</div>
+          <div>jugadores 1/1</div>
+        </div>
+        <div class="game-time">
+          <div>tiempo restante 00:00</div>
+          <div>proxima eliminacion en : 00:00</div>
+        </div>
+        <div class="game-one-noticias">
+          aqui van a salir noticias cuando haya alguna :v
+        </div>
       </div>
+
       <div class="game-one-click">
         <div class="game-one-click-infoClicks">
-          <div class="">
-            <p id="game-one-click-infoClicks-auto">
-              Clicks automaticos : 00000000000
-            </p>
-          </div>
-          <div class="game-one-click-infoClicks-mul">
-            <p id="clickPerClick">
-              multiplicador de clicks manuales :00000000000
-            </p>
-          </div>
-          <div class="game-one-click-total">
-            <p id="totalClicks">clicks totales : 00000000</p>
+          <div class="game-clicks-info">
+            <div class="game-generic-info">
+              <p id="game-one-click-infoClicks-auto">
+                Clicks automaticos : 00000000000
+              </p>
+            </div>
+            <div class="game-one-click-infoClicks-mul game-generic-info">
+              <p id="clickPerClick">
+                multiplicador de clicks manuales :00000000000
+              </p>
+            </div>
           </div>
         </div>
         <div id="mainButton" class="game-one-click-redButton">
-          <p>clicks disponibles :</p>
+          <p>clicks disponibles</p>
           <p id="mainButton-clicks">00000000000</p>
+        </div>
+        <div class="game-one-click-total">
+          <p id="totalClicks">clicks totales : 00000000</p>
         </div>
       </div>
       <div class="game-one-buttons">
@@ -108,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div id="tienda">
+    <div id="tienda" class="none">
       <button class="perk">
         <div class="perk-info">
           <div class="perk-name">Perk1</div>
