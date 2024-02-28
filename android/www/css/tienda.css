@@ -96,6 +96,9 @@
 .brazo {
   background: url(../img/tercer-brazo.png) center no-repeat;
 }
+.coin {
+  background: url(../img/moneda-dorada.png) center no-repeat;
+}
 .perk-img {
   height: 100px;
   background-size: contain;
