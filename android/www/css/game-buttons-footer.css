@@ -16,3 +16,9 @@
   flex-direction: row;
   position: relative;
 }
+#game-one-tienda-button {
+  background-color: #50c878;
+}
+#game-one-salir-button {
+  background-color: #e51a4c;
+}
