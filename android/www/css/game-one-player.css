@@ -60,7 +60,7 @@
   transform: rotateX(50deg) perspective(3000px);
   transition: 0.3s;
   position: relative;
-  bottom: 20px;
+  bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
