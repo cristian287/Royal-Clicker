@@ -1,0 +1,65 @@
+[
+  {
+    "nombre": "Mano Amiga",
+    "tipo": "CPS",
+    "costo": 20,
+    "incremento": 1,
+    "description": "Te otorga una mano extra para que te ayude a dar un click extra cada segundo"
+  },
+  {
+    "nombre": "Parvada de Manos",
+    "tipo": "CPS",
+    "costo": 200,
+    "incremento": 10,
+    "description": "Usando la magia ancestral de la Cornucopia haces un llamado a 10 manos que te otorgan 10 clicks por segundo"
+  },
+  {
+    "nombre": "Enjambre de Manos",
+    "tipo": "CPS",
+    "costo": 1000,
+    "incremento": 100,
+    "description": " Alza las manos para hacer un llamado a la fuerza y traer un enjambre de manos que se ocuparan de dar 100 clicks por ti por segundo"
+  },
+  {
+    "nombre": "Sociedad de Manos",
+    "tipo": "CPS",
+    "costo": 15000,
+    "incremento": 1000,
+    "description": " quieres manos? tenemos manos, muchas manos, una sociedad de manos que te daran mil clicks extra por segundo"
+  },
+  {
+    "nombre": "Tercer Brazo",
+    "tipo": "CPC",
+    "costo": 10,
+    "incremento": 1,
+    "description": "dar tantos clicks te hicieron evolucionar para tener un brazo extra y que tus clicks valgan uno más"
+  },
+  {
+    "nombre": "Cuarto Brazo",
+    "tipo": "CPC",
+    "costo": 100,
+    "incremento": 10,
+    "description": " ya no podras ser llamado manco, las extremidades brotan de tu cuerpo para que tus clicks valgan 10 extra"
+  },
+  {
+    "nombre": "Quinta extremidad",
+    "tipo": "CPC",
+    "costo": 1000,
+    "incremento": 100,
+    "description": " todos te miran con admiracion y idolatran tus gigantes extremidades que hacen 100 click extra por cada click"
+  },
+  {
+    "nombre": "Evolución forzada",
+    "tipo": "CPC",
+    "costo": 20000,
+    "incremento": 1000,
+    "description": " el tiempo llego...tus clicks valen 1000 extra cada uno"
+  },
+  {
+    "nombre": "La casa invita",
+    "tipo": "Especial",
+    "costo": 10,
+    "incremento": 0,
+    "description": "La casa invita la siguiente ronda de clicks haciendo que por 8 segundos todos tus clicks valgan doble"
+  }
+]
