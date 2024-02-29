@@ -1,4 +1,5 @@
-export default async function updateVisual(player) {
+import { player } from "../index.js";
+export default async function updateVisual() {
   document.getElementById(
     "game-one-click-infoClicks-auto"
   ).textContent = `Clicks por segundo: ${player.autoClick}`;

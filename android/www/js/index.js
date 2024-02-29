@@ -24,15 +24,20 @@ import clickerButtons from "../js/clickerStart/buttons.js";
 import updateVisual from "../js/utilityFunctions/updateVisual.js";
 import { vanishUnvanish } from "../js/utilityFunctions/vanishData.js";
 
-const player = {
+export const player = {
   clicks: 0,
   clickPerClick: 1,
   autoClick: 0,
   acumulatedClicks: 0,
   tiendaAbierta: false,
   makeManualClick: function () {
+    console.log(this);
     this.clicks = this.clickPerClick + this.clicks;
     this.acumulatedClicks = this.acumulatedClicks + this.clickPerClick;
+  },
+  makeAutoClick: function () {
+    this.clicks = this.autoClick + this.clicks;
+    this.accumulatedClicks = this.accumulatedClicks + this.autoClick;
   },
   resetMe: function () {
     console.log("resetting");
@@ -44,11 +49,11 @@ const player = {
   },
 };
 
-clickerButtons(player);
+clickerButtons();
 
 document.getElementById("mainButton").addEventListener("click", function () {
   player.makeManualClick();
-  updateVisual(player);
+  updateVisual();
 });
 
 document

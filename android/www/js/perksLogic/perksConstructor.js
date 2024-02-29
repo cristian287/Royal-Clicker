@@ -1,3 +1,4 @@
+import { addPerks } from "./addPerks.js";
 export async function createPerks() {
   const perksToFind = []; //Acá irían las perks a buscar cuando agreguemos el filtro.
   fetch("../www/JSON/perks.JSON")
@@ -21,6 +22,9 @@ export async function createPerks() {
                 <div class="perk-img ${imageElement}"></div>
                 <div class="perk-cant">0000000000</div>
             </div>`;
+        perkElement.addEventListener("click", function () {
+          addPerks(p.tipo, p.incremento, p.costo);
+        });
         perkContainer.appendChild(perkElement);
       });
     });
