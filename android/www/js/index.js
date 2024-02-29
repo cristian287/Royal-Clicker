@@ -36,8 +36,25 @@ export const player = {
     this.acumulatedClicks = this.acumulatedClicks + this.clickPerClick;
   },
   makeAutoClick: function () {
+    console.log(this);
     this.clicks = this.autoClick + this.clicks;
-    this.accumulatedClicks = this.accumulatedClicks + this.autoClick;
+    this.acumulatedClicks = this.acumulatedClicks + this.autoClick;
+    updateVisual();
+  },
+  autoClickIntervalId: null,
+  toggleAutoClick: function () {
+    if (!this.autoClickIntervalId) {
+      this.autoClickIntervalId = setInterval(() => {
+        this.makeAutoClick();
+      }, 1000);
+    } else {
+      clearInterval(this.autoClickIntervalId);
+      this.autoClickIntervalId = null;
+    }
+  },
+  stopAutoClick: function () {
+    clearInterval(this.autoClickIntervalId);
+    this.autoClickIntervalId = null;
   },
   resetMe: function () {
     console.log("resetting");
@@ -46,6 +63,7 @@ export const player = {
     this.autoClick = 0;
     this.acumulatedClicks = 0;
     this.tiendaAbierta = false;
+    this.stopAutoClick();
   },
 };
 

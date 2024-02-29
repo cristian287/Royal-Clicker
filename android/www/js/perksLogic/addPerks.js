@@ -1,10 +1,10 @@
 import { player } from "../index.js";
 import updateVisual from "../utilityFunctions/updateVisual.js";
 export async function addPerks(type, quantity, price) {
-  if (player.acumulatedClicks < price) {
+  if (player.clicks < price) {
     return;
   }
-  player.acumulatedClicks -= price;
+  player.clicks -= price;
   function addCPS() {
     player.autoClick += quantity;
   }

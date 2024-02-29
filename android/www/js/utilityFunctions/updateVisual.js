@@ -8,8 +8,8 @@ export default async function updateVisual() {
   ).textContent = `multiplicador de clicks manuales: ${player.clickPerClick}`;
   document.getElementById(
     "totalClicks"
-  ).textContent = `clicks totales : ${player.clicks}`;
+  ).textContent = `clicks totales : ${player.acumulatedClicks}`;
   document.getElementById(
     "mainButton-clicks"
-  ).textContent = ` ${player.acumulatedClicks}`;
+  ).textContent = ` ${player.clicks}`;
 }

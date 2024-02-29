@@ -6,11 +6,11 @@ export default async function clickerButtons() {
     .getElementById("practiceMode")
     .addEventListener("click", function () {
       startPracticeGame();
+      startGame("practica");
     });
   function startPracticeGame() {
     vanishUnvanish("unvanish", document.getElementById("game-one-player"));
     vanishUnvanish("vanish", document.getElementById("main_menu"));
   }
-  startGame("practica");
   backToMenu();
 }
