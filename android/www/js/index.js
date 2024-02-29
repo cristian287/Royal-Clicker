@@ -55,11 +55,11 @@ document
   .getElementById("game-one-tienda-button")
   .addEventListener("click", function () {
     if (player.tiendaAbierta) {
-      vanishUnvanish("unvanish", document.getElementById("tienda"));
+      vanishUnvanish("vanish", document.getElementById("tienda"));
       player.tiendaAbierta = false;
       return;
     }
-    vanishUnvanish("vanish", document.getElementById("tienda"));
+    vanishUnvanish("unvanish", document.getElementById("tienda"));
     player.tiendaAbierta = true;
   });
 
