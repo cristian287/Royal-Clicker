@@ -75,7 +75,7 @@ mainButton.addEventListener("click", function eventClick() {
   mainButton.removeEventListener("click", eventClick); //TEMPORAL. ACA VA EL BLOQUEO PARA QUE SE REPRODUZCA LA ANIMACION DEL BOTON
   setTimeout(() => {
     mainButton.addEventListener("click", eventClick); //TEMPORAL. ACA VA EL BLOQUEO PARA QUE SE REPRODUZCA LA ANIMACION DEL BOTON
-  }, 200); //TEMPORAL. ACA VA EL LIMITE DE CLICKS QUE UNO PUEDE HACER
+  }, 0); //TEMPORAL. ACA VA EL LIMITE DE CLICKS QUE UNO PUEDE HACER
 });
 
 document
