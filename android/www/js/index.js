@@ -31,12 +31,10 @@ export const player = {
   acumulatedClicks: 0,
   tiendaAbierta: false,
   makeManualClick: function () {
-    console.log(this);
     this.clicks = this.clickPerClick + this.clicks;
     this.acumulatedClicks = this.acumulatedClicks + this.clickPerClick;
   },
   makeAutoClick: function () {
-    console.log(this);
     this.clicks = this.autoClick + this.clicks;
     this.acumulatedClicks = this.acumulatedClicks + this.autoClick;
     updateVisual();
