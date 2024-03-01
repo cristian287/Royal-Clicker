@@ -19,7 +19,7 @@ export async function createPerks() {
                 </div>
                 </div>
                 <div class="perk-number">
-                <div class="perk-value">${p.costo}</div>
+                <div class="perk-value">$${p.costo}</div>
                 <div class="perk-img ${imageElement}"></div>
                 <div class="perk-cant">0000000000</div>
             </div>`;
