@@ -67,9 +67,15 @@ export const player = {
 
 clickerButtons();
 
-document.getElementById("mainButton").addEventListener("click", function () {
+const mainButton = document.getElementById("mainButton");
+
+mainButton.addEventListener("click", function eventClick() {
   player.makeManualClick();
   updateVisual();
+  mainButton.removeEventListener("click", eventClick); //TEMPORAL. ACA VA EL BLOQUEO PARA QUE SE REPRODUZCA LA ANIMACION DEL BOTON
+  setTimeout(() => {
+    mainButton.addEventListener("click", eventClick); //TEMPORAL. ACA VA EL BLOQUEO PARA QUE SE REPRODUZCA LA ANIMACION DEL BOTON
+  }, 200); //TEMPORAL. ACA VA EL LIMITE DE CLICKS QUE UNO PUEDE HACER
 });
 
 document
