@@ -51,7 +51,7 @@
   {
     "nombre": "Evolución forzada",
     "tipo": "CPC",
-    "costo": 20000,
+    "costo":20000,
     "incremento": 1000,
     "description": " el tiempo llego...tus clicks valen 1000 extra cada uno"
   },
