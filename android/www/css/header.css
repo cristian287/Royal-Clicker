@@ -46,14 +46,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: scroll 10s linear infinite;
+  animation-delay: 2s;
+  flex-direction: row;
+  transform: translateX(calc(200% - 10px));
+  pointer-events: none;
 }
-.noticia-img {
-  display: block;
-  height: 100%;
+#noticia-text::after {
+  content: "1234567890";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
   width: fit-content;
   background: url(../img/royal-news.jpg) no-repeat center;
   background-size: cover;
   color: transparent;
-  padding-top: 0;
   font-size: 15px;
+}
+#noticia-text::before {
+  content: "1234567890";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: fit-content;
+  background: url(../img/royal-news.jpg) no-repeat center;
+  background-size: cover;
+  color: transparent;
+  font-size: 15px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(calc(200% - 10px));
+  }
+  100% {
+    transform: translateX(calc(-100% - 10px));
+  }
 }
