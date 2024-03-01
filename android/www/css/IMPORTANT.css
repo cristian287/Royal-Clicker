@@ -84,22 +84,69 @@ body:-webkit-scrollbar {
   display: none;
 }
 .load {
-  content: "";
-  font-size: 30px;
   position: absolute;
-  animation: load 2s linear 1s forwards;
+  animation: load 2s linear 1 forwards;
   transform-origin: left;
   overflow: hidden;
+  opacity: 30%;
 }
 @keyframes load {
   0% {
     opacity: 0;
-    background-color: black;
   }
   15% {
   }
   100% {
     opacity: 100%;
+  }
+}
+.load::after {
+  content: "cargando";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: url(../img/loading.jpg);
+  animation: loadPage 1s linear forwards, loadMove 2s linear infinite alternate;
+  animation-delay: 1s, 0s;
+  box-shadow: inset 0px 0px 1px 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vh;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+@keyframes loadPage {
+  0% {
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+    background: url(../img/loading.jpg);
+  }
+  15% {
+    height: 100%;
+    width: 100%;
+    background: url(../img/loading.jpg);
+  }
+  20% {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    height: 0%;
+    width: 0;
+  }
+}
+@keyframes loadMove {
+  0% {
+  }
+  100% {
+    background-position: 0% 900%;
   }
 }
 /* .onLoad {

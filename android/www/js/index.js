@@ -24,15 +24,37 @@ import clickerButtons from "../js/clickerStart/buttons.js";
 import updateVisual from "../js/utilityFunctions/updateVisual.js";
 import { vanishUnvanish } from "../js/utilityFunctions/vanishData.js";
 
-const player = {
+export const player = {
   clicks: 0,
   clickPerClick: 1,
   autoClick: 0,
   acumulatedClicks: 0,
   tiendaAbierta: false,
   makeManualClick: function () {
+    console.log(this);
     this.clicks = this.clickPerClick + this.clicks;
     this.acumulatedClicks = this.acumulatedClicks + this.clickPerClick;
+  },
+  makeAutoClick: function () {
+    console.log(this);
+    this.clicks = this.autoClick + this.clicks;
+    this.acumulatedClicks = this.acumulatedClicks + this.autoClick;
+    updateVisual();
+  },
+  autoClickIntervalId: null,
+  toggleAutoClick: function () {
+    if (!this.autoClickIntervalId) {
+      this.autoClickIntervalId = setInterval(() => {
+        this.makeAutoClick();
+      }, 1000);
+    } else {
+      clearInterval(this.autoClickIntervalId);
+      this.autoClickIntervalId = null;
+    }
+  },
+  stopAutoClick: function () {
+    clearInterval(this.autoClickIntervalId);
+    this.autoClickIntervalId = null;
   },
   resetMe: function () {
     console.log("resetting");
@@ -41,25 +63,26 @@ const player = {
     this.autoClick = 0;
     this.acumulatedClicks = 0;
     this.tiendaAbierta = false;
+    this.stopAutoClick();
   },
 };
 
-clickerButtons(player);
+clickerButtons();
 
 document.getElementById("mainButton").addEventListener("click", function () {
   player.makeManualClick();
-  updateVisual(player);
+  updateVisual();
 });
 
 document
   .getElementById("game-one-tienda-button")
   .addEventListener("click", function () {
     if (player.tiendaAbierta) {
-      vanishUnvanish("unvanish", document.getElementById("tienda"));
+      vanishUnvanish("vanish", document.getElementById("tienda"));
       player.tiendaAbierta = false;
       return;
     }
-    vanishUnvanish("vanish", document.getElementById("tienda"));
+    vanishUnvanish("unvanish", document.getElementById("tienda"));
     player.tiendaAbierta = true;
   });
 
