@@ -10,7 +10,6 @@
   flex-direction: column;
   background-color: #482c68;
   overflow: hidden;
-  opacity: 0;
 }
 /* .flip-menu1 {
   animation: abrir 4s linear 1s forwards;
