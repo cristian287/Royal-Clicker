@@ -1,6 +1,7 @@
 import { vanishUnvanish } from "../utilityFunctions/vanishData.js";
 import updateVisual from "../utilityFunctions/updateVisual.js";
 import { player } from "../index.js";
+import { deletePerks } from "../perksLogic/perksConstructor.js";
 export async function backToMenu() {
   document
     .getElementById("game-one-salir-button")
@@ -11,5 +12,6 @@ export async function backToMenu() {
       vanishUnvanish("vanish", document.getElementById("tienda"));
       player.resetMe();
       updateVisual();
+      deletePerks();
     });
 }

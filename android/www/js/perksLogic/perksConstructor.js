@@ -1,6 +1,7 @@
 import { addPerks } from "./addPerks.js";
+const perksToFind = []; //Acá irían las perks a buscar cuando agreguemos el filtro.
 export async function createPerks() {
-  const perksToFind = []; //Acá irían las perks a buscar cuando agreguemos el filtro.
+  //Si vamos a hacer lo de elegir los perks, esta línea sería perksToFind = parameter
   fetch("../www/JSON/perks.JSON")
     .then((r) => r.json())
     .then((data) => {
@@ -28,4 +29,11 @@ export async function createPerks() {
         perkContainer.appendChild(perkElement);
       });
     });
+}
+
+export async function deletePerks() {
+  const perkContainer = document.getElementById("tienda");
+  while (perkContainer.firstChild) {
+    perkContainer.removeChild(perkContainer.lastChild);
+  }
 }
