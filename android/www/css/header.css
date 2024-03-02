@@ -1,8 +1,12 @@
 .game-info {
   width: 100%;
-  background-color: aqua;
+  background: rgb(173, 173, 173);
+  background: linear-gradient(
+    0deg,
+    rgba(173, 173, 173, 1) 0%,
+    rgba(155, 94, 79, 1) 28%
+  );
   position: relative;
-  font-size: 20px;
   text-transform: capitalize;
   display: flex;
   justify-content: space-evenly;
@@ -38,7 +42,7 @@
   white-space: nowrap;
   scrollbar-width: none;
   overflow-x: scroll;
-  background-color: 81d8d0;
+  background-color: #adadad;
   display: flex;
   flex-direction: row;
 }
@@ -60,7 +64,7 @@
   justify-content: center;
   height: 90%;
   width: fit-content;
-  background: url(../img/royal-news.jpg) no-repeat center;
+  background: url(../img/royal-news.png) no-repeat center;
   background-size: cover;
   color: transparent;
   font-size: 15px;
@@ -73,7 +77,7 @@
   justify-content: center;
   height: 90%;
   width: fit-content;
-  background: url(../img/royal-news.jpg) no-repeat center;
+  background: url(../img/royal-news.png) no-repeat center;
   background-size: cover;
   color: transparent;
   font-size: 15px;

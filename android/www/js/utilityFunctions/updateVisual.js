@@ -5,7 +5,7 @@ export default async function updateVisual() {
   ).textContent = `Clicks por segundo: ${player.autoClick}`;
   document.getElementById(
     "clickPerClick"
-  ).textContent = `multiplicador de clicks manuales: ${player.clickPerClick}`;
+  ).textContent = `clicks manuales X ${player.clickPerClick}`;
   document.getElementById(
     "totalClicks"
   ).textContent = `clicks totales : ${player.acumulatedClicks}`;

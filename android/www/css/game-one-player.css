@@ -37,7 +37,7 @@
   flex-direction: column;
 }
 .game-generic-info {
-  font-size: 20px;
+  font-size: 10px;
 }
 .game-clicks-info {
   display: flex;

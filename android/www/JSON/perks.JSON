@@ -4,7 +4,7 @@
     "tipo": "CPS",
     "costo": 20,
     "incremento": 1,
-    "description": "Te otorga una mano extra para que te ayude a dar un click extra cada segundo"
+    "description": "Estas buscando un amigo y no tienes donde encontrarlo? pues te presentamos a la Mano amiga ella dara 1 click por ti cada segundo "
   },
   {
     "nombre": "Parvada de Manos",
@@ -53,7 +53,7 @@
     "tipo": "CPC",
     "costo":20000,
     "incremento": 1000,
-    "description": " el tiempo llego...tus clicks valen 1000 extra cada uno"
+    "description": "La evolucion propiciada por dar tantos clicks te hizo un ser superior  ...tus clicks valen 1000 extra cada uno"
   },
   {
     "nombre": "La casa invita",
