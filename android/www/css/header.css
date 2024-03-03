@@ -1,11 +1,6 @@
 .game-info {
   width: 100%;
-  background: rgb(173, 173, 173);
-  background: linear-gradient(
-    0deg,
-    rgba(173, 173, 173, 1) 0%,
-    rgba(155, 94, 79, 1) 28%
-  );
+  background-color: rgba(155, 94, 79, 1);
   position: relative;
   text-transform: capitalize;
   display: flex;
@@ -45,6 +40,7 @@
   background-color: #adadad;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 #noticia-text {
   display: flex;
@@ -55,6 +51,7 @@
   flex-direction: row;
   transform: translateX(calc(200% - 10px));
   pointer-events: none;
+  background-color: #adadad;
 }
 #noticia-text::after {
   content: "1234567890";
@@ -88,5 +85,60 @@
   }
   100% {
     transform: translateX(calc(-100% - 10px));
+  }
+}
+.noticia-img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
+  background: url(../img/royal-news.png) center;
+  background-size: contain;
+  color: transparent;
+  font-size: 5px;
+  animation: moving-backgroundTwo 300s infinite normal forwards linear,
+    hue-rotate 3s infinite alternate forwards linear;
+}
+@keyframes moving-backgroundTwo {
+  0% {
+  }
+  100% {
+    background-position: 10000% 0;
+  }
+}
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(90deg);
+  }
+  10% {
+    filter: hue-rotate(70deg);
+  }
+  20% {
+    filter: hue-rotate(190deg);
+  }
+  30% {
+    filter: hue-rotate(170deg);
+  }
+  40% {
+    filter: hue-rotate(50deg);
+  }
+  50% {
+    filter: hue-rotate(100deg);
+  }
+  60% {
+    filter: hue-rotate(260deg);
+  }
+  70% {
+    filter: hue-rotate(130deg);
+  }
+  80% {
+    filter: hue-rotate(140deg);
+  }
+  90% {
+    filter: hue-rotate(155deg);
+  }
+  100% {
   }
 }
